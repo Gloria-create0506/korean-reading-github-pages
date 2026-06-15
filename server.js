@@ -5,7 +5,7 @@ const crypto = require("crypto");
 
 const rootDir = __dirname;
 const port = Number(process.env.PORT || 3000);
-const supabaseUrl = trimTrailingSlash(process.env.SUPABASE_URL || "");
+const supabaseUrl = normalizeSupabaseUrl(process.env.SUPABASE_URL || "");
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || "";
 const supabaseAuthEnabled = Boolean(supabaseUrl && supabaseAnonKey);
 const allowSignup = process.env.ALLOW_SIGNUP !== "false";
@@ -30,6 +30,17 @@ const publicPaths = new Set(["/auth.html", "/assets/auth.js"]);
 
 function trimTrailingSlash(value) {
   return String(value).replace(/\/+$/, "");
+}
+
+function normalizeSupabaseUrl(value) {
+  const rawValue = trimTrailingSlash(value.trim());
+  if (!rawValue) return "";
+  try {
+    const url = new URL(rawValue);
+    return url.origin;
+  } catch {
+    return rawValue;
+  }
 }
 
 function safeEqual(a, b) {
@@ -363,4 +374,9 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(port, () => {
   console.log(`Korean reading workbench is running on port ${port}`);
+  if (supabaseAuthEnabled) {
+    console.log(`Supabase auth is enabled for ${supabaseUrl}`);
+  } else {
+    console.log("Supabase auth is not configured; falling back to simple access control.");
+  }
 });

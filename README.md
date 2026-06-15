@@ -75,6 +75,20 @@ SUPABASE_ANON_KEY=你的 Supabase anon public key
 ALLOW_SIGNUP=true
 ```
 
+`SUPABASE_URL` 应该类似：
+
+```text
+https://xxxxxxxxxxxx.supabase.co
+```
+
+不要填写这些形式：
+
+```text
+https://supabase.com/dashboard/project/...
+https://xxxxxxxxxxxx.supabase.co/auth/v1
+https://xxxxxxxxxxxx.supabase.co/rest/v1
+```
+
 如果你不想让用户自行注册，只允许已经在 Supabase 后台创建的用户登录：
 
 ```text
