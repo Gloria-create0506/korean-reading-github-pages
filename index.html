@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>韩语阅读自学工作台 - 요리</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">韩语阅读自学工作台</p>
+        <h1><span id="chapterNumber">01</span> <span id="chapterTitleKo">요리</span> <span id="chapterTitleEn">料理</span></h1>
+        <label class="chapterPicker">
+          <span>选择章节</span>
+          <select id="chapterSelect" aria-label="选择阅读章节"></select>
+        </label>
+      </div>
+      <div id="progressWidget" class="progressBox" aria-live="polite" role="group" aria-label="当前章节完成进度，悬停或聚焦可查看进度条" tabindex="0">
+        <div class="progressTop">
+          <span class="progressLabel">章节完成</span>
+          <span id="progressText">0 / 6</span>
+        </div>
+        <div class="progressTrack" aria-hidden="true">
+          <span id="progressBar"></span>
+        </div>
+        <span class="progressHint">明确完成条件</span>
+      </div>
+      <div class="growthStrip" aria-label="长期学习成长数据">
+        <span>等级 <b id="levelText">1</b></span>
+        <span>经验 <b id="xpText">0</b></span>
+        <span>奖励 <b id="coinText">0</b></span>
+        <span>连续 <b id="streakText">0</b></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="lessonHero" aria-label="今日阅读">
+        <div class="heroCopy">
+          <p class="eyebrow">今日阅读</p>
+          <h2 class="heroTitle">
+            <span id="heroLead">用韩语读懂</span>
+            <span id="heroTopic" class="noBreak">요리</span>
+          </h2>
+          <p>按自己的节奏探索原文、词语、句式和理解检测。</p>
+          <div id="lessonFocus" class="lessonFocus" aria-label="本章阅读目标"></div>
+          <div class="readingSteps" aria-label="自学入口">
+            <span>阅读原文</span>
+            <span>词语精读</span>
+            <span>句式理解</span>
+            <span>理解检测</span>
+          </div>
+        </div>
+        <figure class="heroVisual">
+          <img id="chapterHeroImage" src="assets/images/chapter01-cooking-book.jpeg" alt="书中关于김치찌개做法的四格插画">
+        </figure>
+      </section>
+
+      <section class="studyBand recordBand" aria-label="学习记录">
+        <div class="sectionHead">
+          <div>
+            <p class="eyebrow">当前进度</p>
+            <h2>学习记录</h2>
+          </div>
+          <button id="continueStudyBtn" class="primaryButton" type="button">继续自学</button>
+        </div>
+        <div id="recordGrid" class="recordGrid"></div>
+      </section>
+
+      <section class="studyBand introBand">
+        <div class="sectionHead">
+          <div>
+            <p class="eyebrow">阅读原文</p>
+            <h2>原文精读</h2>
+          </div>
+          <div id="voiceStatus" class="statusPill">正在检查韩语语音</div>
+        </div>
+        <div class="audioControlDock">
+          <div class="toolbar" aria-label="原文阅读与可选朗读控制">
+            <button id="readAllBtn" class="primaryButton iconButton" type="button" aria-label="朗读全文" title="朗读全文">
+              <svg class="speakerIcon" viewBox="0 0 24 24" aria-hidden="true">
+                <polygon points="11 5 6 9 3 9 3 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+                <path d="M18.8 5.2a9.5 9.5 0 0 1 0 13.6"></path>
+              </svg>
+            </button>
+            <button id="playPauseBtn" class="iconButton" type="button" aria-label="暂停播放" title="暂停播放">⏸</button>
+            <button id="stopBtn" type="button">停止</button>
+            <div class="rateGroup" role="group" aria-label="可选音频播放速度">
+              <button type="button" data-rate="0.75">0.75x</button>
+              <button type="button" data-rate="1" class="isActive">1x</button>
+              <button type="button" data-rate="1.25">1.25x</button>
+              <button type="button" data-rate="1.5">1.5x</button>
+            </div>
+            <button id="markReadingBtn" class="primaryButton" type="button">标记原文已读</button>
+            <label class="silentModeToggle">
+              <input id="silentModeToggle" type="checkbox">
+              <span>静音学习模式</span>
+            </label>
+          </div>
+          <div class="audioScrubber" aria-label="原书音频进度">
+            <span id="audioCurrent">0:00</span>
+            <input id="audioSeek" type="range" min="0" max="100" value="0" step="0.1" aria-label="拖动调整原书音频进度">
+            <span id="audioDuration">0:00</span>
+            <span class="audioHint">可拖动回听</span>
+          </div>
+        </div>
+        <div class="lessonTasks" aria-label="本章完成进度">
+          <div class="taskSummary">
+            <div>
+              <p class="eyebrow">进度条件</p>
+              <h3>本章完成清单</h3>
+            </div>
+            <span id="taskProgressText">0 / 6</span>
+          </div>
+          <div class="taskProgressTrack" aria-hidden="true">
+            <span id="taskProgressBar"></span>
+          </div>
+          <div id="taskList" class="taskList"></div>
+        </div>
+        <div id="sentenceList" class="sentenceList"></div>
+      </section>
+
+      <section id="vocabSection" class="studyBand">
+        <div class="sectionHead">
+          <div>
+            <p class="eyebrow">词语</p>
+            <h2>词语精读</h2>
+          </div>
+          <div class="filterTools">
+            <label class="searchBox">
+              <span>筛选</span>
+              <input id="wordSearch" type="search" placeholder="输入韩文、英文或中文">
+            </label>
+            <label class="searchBox">
+              <span>词性</span>
+              <select id="posFilter" aria-label="按词性筛选单词">
+                <option value="">全部</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div id="vocabGrid" class="vocabGrid"></div>
+      </section>
+
+      <section id="grammarSection" class="studyBand">
+        <div class="sectionHead">
+          <div>
+            <p class="eyebrow">句式</p>
+            <h2>句式理解</h2>
+          </div>
+        </div>
+        <div id="grammarList" class="grammarList"></div>
+      </section>
+
+      <section id="challengeSection" class="studyBand">
+        <div class="sectionHead">
+          <div>
+            <p class="eyebrow">句子重组</p>
+            <h2>句子练习</h2>
+          </div>
+          <button id="resetChallengeBtn" type="button">重排</button>
+        </div>
+        <div id="sentenceChallenge" class="sentenceChallenge"></div>
+      </section>
+
+      <section class="studyBand">
+        <div class="sectionHead">
+          <div>
+            <p class="eyebrow">可选练习</p>
+            <h2>发音提示（可选）</h2>
+          </div>
+        </div>
+        <div id="pronunciationList" class="pronunciationList"></div>
+      </section>
+
+      <section class="studyBand twoColumn">
+        <div id="quizPanel" class="quizPanel">
+          <div class="sectionHead compact">
+            <div>
+              <p class="eyebrow">自测</p>
+              <h2>理解检测</h2>
+            </div>
+          </div>
+          <form id="quizForm" class="quizForm"></form>
+          <div id="memoryPractice" class="memoryPractice" hidden></div>
+          <div class="toolbar">
+            <button id="checkQuizBtn" class="primaryButton" type="button">检查答案</button>
+            <button id="resetQuizBtn" type="button">重做</button>
+          </div>
+          <p id="quizResult" class="quizResult" aria-live="polite"></p>
+        </div>
+        <aside class="sideStack">
+          <section class="memoryPanel">
+            <p class="eyebrow">复习盒</p>
+            <h2>错题复习盒</h2>
+            <button id="clearMemoryBtn" type="button">清空本章错题</button>
+            <div id="memoryBoxList" class="memoryBoxList"></div>
+          </section>
+          <section class="culturePanel">
+            <p class="eyebrow">阅读补充</p>
+            <h2>本章背景补充</h2>
+            <p id="cultureText"></p>
+          </section>
+        </aside>
+      </section>
+
+      <section id="integratedChallengeSection" class="studyBand">
+        <div class="sectionHead">
+          <div>
+            <p class="eyebrow">综合挑战</p>
+            <h2>综合挑战</h2>
+          </div>
+          <button id="resetIntegratedChallengeBtn" type="button">重试</button>
+        </div>
+        <div id="integratedChallenge" class="integratedChallenge"></div>
+      </section>
+    </main>
+
+    <aside id="readingAssistantPanel" class="readingAssistantPanel" hidden aria-live="polite" aria-label="阅读助手">
+      <div>
+        <button type="button" class="readingAssistantClose" data-close-reading-assistant aria-label="关闭阅读助手">×</button>
+        <p class="eyebrow">阅读笔记</p>
+        <h2 data-reading-assistant-title>阅读助手</h2>
+        <div data-reading-assistant-body></div>
+      </div>
+    </aside>
+
+    <footer class="footerNote">
+      <p>个人学习样板页。内容用于本地学习与校对，不用于公开分发。</p>
+    </footer>
+
+    <script src="assets/storage.js"></script>
+    <script src="assets/state.js"></script>
+    <script src="assets/srs.js"></script>
+    <script src="assets/rewards.js"></script>
+    <script src="assets/reading-assistant.js"></script>
+    <script src="assets/components.js"></script>
+    <script src="assets/book-data.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
