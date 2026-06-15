@@ -1,0 +1,9 @@
+# Local audio files are intentionally kept out of Git.
+# Put real recordings in assets/audio/ for local use, or set audioSrc to remote URLs.
+assets/audio/*.mp3
+assets/audio/*.wav
+assets/audio/*.m4a
+assets/audio/*.ogg
+
+# Keep the audio folder instructions in the repository.
+!assets/audio/README.txt
