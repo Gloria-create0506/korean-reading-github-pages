@@ -2653,8 +2653,20 @@
   }
 
   function resumeReading() {
-    if (state.storyAudio && state.storyAudio.currentTime > 0 && state.storyAudio.paused && state.storyAudio.currentTime < state.storyAudio.duration) {
-      state.storyAudio.play().catch(() => {}).finally(updatePlayPauseButton);
+    if (state.preferences.silentMode) {
+      if (els.voiceStatus) els.voiceStatus.textContent = "静音学习模式已开启，可关闭后再播放音频。";
+      return;
+    }
+    if (state.storyAudio) {
+      if (state.storyAudio.currentTime > 0 && state.storyAudio.currentTime < state.storyAudio.duration) {
+        state.storyAudio.play().catch(() => {
+          els.voiceStatus.textContent = "原书音频无法播放，已切换为浏览器韩语朗读";
+          els.voiceStatus.classList.add("warning");
+          speak(chapter.sentences.map((sentence) => sentence.ko).join(" "));
+        }).finally(updatePlayPauseButton);
+        return;
+      }
+      playStoryAudio();
       return;
     }
     if ("speechSynthesis" in window) {
