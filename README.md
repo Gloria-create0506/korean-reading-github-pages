@@ -39,7 +39,7 @@ https://gloria.github.io/korean-reading-workbench/
 
 ## Render Web Service 发布步骤
 
-如果需要设置访问密码，推荐用 Render Web Service，而不是 GitHub Pages。
+如果需要设置访问控制，推荐用 Render Web Service，而不是 GitHub Pages。
 
 1. 把本文件夹里的全部内容上传到 GitHub 仓库。
 2. 打开 Render，选择 `New` -> `Web Service`。
@@ -48,9 +48,7 @@ https://gloria.github.io/korean-reading-workbench/
    - Runtime: `Node`
    - Build Command: 留空或填写 `npm install`
    - Start Command: `npm start`
-5. 在 `Environment Variables` 中添加：
-   - `ACCESS_USER`: 访问用户名，例如 `gloria`
-   - `ACCESS_PASSWORD`: 访问密码，例如你自己设定的一串密码
+5. 在 `Environment Variables` 中添加登录配置。
 6. 创建服务并等待部署完成。
 7. Render 会生成一个类似下面的访问链接：
 
@@ -58,8 +56,76 @@ https://gloria.github.io/korean-reading-workbench/
 https://你的服务名.onrender.com
 ```
 
-## Render 密码说明
+## 方案一：Supabase 邮箱登录
 
-- 如果没有设置 `ACCESS_PASSWORD`，网页会直接打开。
-- 设置 `ACCESS_PASSWORD` 后，访问网页时浏览器会弹出用户名和密码输入框。
-- 密码不要写在网页前端，也不要提交到 GitHub；只放在 Render 的环境变量里。
+这是推荐方案，适合人数较多、希望用户自行注册和登录的情况。
+
+### Supabase 设置
+
+1. 打开 Supabase，新建项目。
+2. 进入 `Authentication` -> `Providers`，确认 `Email` 已启用。
+3. 进入 `Project Settings` -> `API`，复制：
+   - `Project URL`
+   - `anon public` key
+4. 回到 Render 的 `Environment Variables`，添加：
+
+```text
+SUPABASE_URL=你的 Supabase Project URL
+SUPABASE_ANON_KEY=你的 Supabase anon public key
+ALLOW_SIGNUP=true
+```
+
+如果你不想让用户自行注册，只允许已经在 Supabase 后台创建的用户登录：
+
+```text
+ALLOW_SIGNUP=false
+```
+
+### 用户使用方式
+
+用户访问 Render 链接后，会先进入邮箱登录页：
+
+```text
+邮箱
+密码
+登录 / 注册新账号
+```
+
+注册后如果 Supabase 要求邮箱确认，用户需要先去邮箱点确认链接，再回来登录。
+
+## 方案二：简单用户名密码
+
+## 多人独立账号
+
+如果不使用 Supabase，也可以继续用简单账号表。每个人都有自己的用户名和密码，设置一个环境变量：
+
+```text
+ACCESS_USERS
+```
+
+推荐填写 JSON 格式：
+
+```json
+[
+  {"user":"student01","password":"pass001"},
+  {"user":"student02","password":"pass002"},
+  {"user":"student03","password":"pass003"}
+]
+```
+
+Render 中填写时：
+
+```text
+Key: ACCESS_USERS
+Value: [{"user":"student01","password":"pass001"},{"user":"student02","password":"pass002"},{"user":"student03","password":"pass003"}]
+```
+
+也可以用简写格式：
+
+```text
+student01:pass001,student02:pass002,student03:pass003
+```
+
+如果同时设置了 `ACCESS_USERS` 和 `ACCESS_USER` / `ACCESS_PASSWORD`，系统会优先使用 `ACCESS_USERS`。
+
+注意：如果设置了 `SUPABASE_URL` 和 `SUPABASE_ANON_KEY`，系统会优先使用 Supabase 邮箱登录。

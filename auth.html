@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录 - 韩语阅读自学工作台</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #23313d;
+        --muted: #6b7a86;
+        --line: #dbe4ea;
+        --paper: #fffaf2;
+        --accent: #d85f39;
+        --accent-dark: #a83c23;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 10% 20%, rgba(216, 95, 57, 0.12), transparent 32%),
+          linear-gradient(135deg, #fffaf2, #edf5f7);
+        font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+      }
+
+      main {
+        width: min(420px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.94);
+        padding: 28px;
+        box-shadow: 0 18px 50px rgba(35, 49, 61, 0.14);
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--accent-dark);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+
+      p {
+        margin: 0 0 20px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        margin: 14px 0;
+        font-weight: 700;
+      }
+
+      input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 12px 13px;
+        color: var(--ink);
+        font: inherit;
+        background: #fff;
+      }
+
+      input:focus {
+        outline: 2px solid rgba(216, 95, 57, 0.28);
+        border-color: var(--accent);
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+
+      button {
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        padding: 11px 16px;
+        color: #fff;
+        background: var(--accent);
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      button.secondary {
+        color: var(--accent-dark);
+        background: #fff;
+      }
+
+      button:disabled {
+        cursor: wait;
+        opacity: 0.64;
+      }
+
+      .message {
+        min-height: 24px;
+        margin-top: 16px;
+        color: var(--accent-dark);
+        font-weight: 700;
+      }
+
+      .small {
+        margin-top: 18px;
+        margin-bottom: 0;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">KOREAN READING WORKBENCH</p>
+      <h1>邮箱登录</h1>
+      <p>登录后进入韩语阅读自学工作台。首次使用可先注册账号。</p>
+
+      <form id="authForm">
+        <label>
+          邮箱
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </label>
+        <label>
+          密码
+          <input id="password" name="password" type="password" autocomplete="current-password" minlength="6" required>
+        </label>
+        <div class="actions">
+          <button id="loginBtn" type="submit">登录</button>
+          <button id="signupBtn" class="secondary" type="button">注册新账号</button>
+        </div>
+        <div id="message" class="message" aria-live="polite"></div>
+      </form>
+
+      <p class="small">如果注册后提示确认邮箱，请先打开邮箱完成确认，再回到这里登录。</p>
+    </main>
+
+    <script src="assets/auth.js"></script>
+  </body>
+</html>
