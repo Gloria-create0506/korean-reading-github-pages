@@ -6,7 +6,7 @@ window.KOREAN_BOOK_DATA = {
       "titleEn": "Cooking",
       "sourcePages": "PDF pages 9-12",
       "audio": {
-        "src": "assets/audio/story-01.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch01-full.mp3",
         "label": "Story 1 原书音频"
       },
       "sentences": [
@@ -622,7 +622,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第2章插画"
       },
       "audio": {
-        "src": "assets/audio/story-02.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch02-full.mp3",
         "label": "Story 2 原书音频"
       },
       "sentences": [
@@ -1379,7 +1379,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第3章插画"
       },
       "audio": {
-        "src": "assets/audio/story-03.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch03-full.mp3",
         "label": "Story 3 原书音频"
       },
       "sentences": [
@@ -2241,7 +2241,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第4章插画"
       },
       "audio": {
-        "src": "assets/audio/story-04.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch04-full.mp3",
         "label": "Story 4 原书音频"
       },
       "sentences": [
@@ -2962,7 +2962,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第5章插画"
       },
       "audio": {
-        "src": "assets/audio/story-05.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch05-full.mp3",
         "label": "Story 5 原书音频"
       },
       "sentences": [
@@ -3888,7 +3888,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第6章插画"
       },
       "audio": {
-        "src": "assets/audio/story-06.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch06-full.mp3",
         "label": "Story 6 原书音频"
       },
       "sentences": [
@@ -4488,7 +4488,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第7章插画"
       },
       "audio": {
-        "src": "assets/audio/story-07.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch07-full.mp3",
         "label": "Story 7 原书音频"
       },
       "sentences": [
@@ -5263,7 +5263,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第8章插画"
       },
       "audio": {
-        "src": "assets/audio/story-08.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch08-full.mp3",
         "label": "Story 8 原书音频"
       },
       "sentences": [
@@ -6043,7 +6043,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第9章插画"
       },
       "audio": {
-        "src": "assets/audio/story-09.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch09-full.mp3",
         "label": "Story 9 原书音频"
       },
       "sentences": [
@@ -6815,7 +6815,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第10章插画"
       },
       "audio": {
-        "src": "assets/audio/story-10.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch10-full.mp3",
         "label": "Story 10 原书音频"
       },
       "sentences": [
@@ -7476,7 +7476,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第11章插画"
       },
       "audio": {
-        "src": "assets/audio/story-11.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch11-full.mp3",
         "label": "Story 11 原书音频"
       },
       "sentences": [
@@ -8286,7 +8286,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第12章插画"
       },
       "audio": {
-        "src": "assets/audio/story-12.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch12-full.mp3",
         "label": "Story 12 原书音频"
       },
       "sentences": [
@@ -9025,7 +9025,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第13章插画"
       },
       "audio": {
-        "src": "assets/audio/story-13.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch13-full.mp3",
         "label": "Story 13 原书音频"
       },
       "sentences": [
@@ -9764,7 +9764,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第14章插画"
       },
       "audio": {
-        "src": "assets/audio/story-14.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch14-full.mp3",
         "label": "Story 14 原书音频"
       },
       "sentences": [
@@ -10423,7 +10423,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第15章插画"
       },
       "audio": {
-        "src": "assets/audio/story-15.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch15-full.mp3",
         "label": "Story 15 原书音频"
       },
       "sentences": [
@@ -11199,7 +11199,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第16章插画"
       },
       "audio": {
-        "src": "assets/audio/story-16.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch16-full.mp3",
         "label": "Story 16 原书音频"
       },
       "sentences": [
@@ -11939,7 +11939,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第17章插画"
       },
       "audio": {
-        "src": "assets/audio/story-17.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch17-full.mp3",
         "label": "Story 17 原书音频"
       },
       "sentences": [
@@ -12740,7 +12740,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第18章插画"
       },
       "audio": {
-        "src": "assets/audio/story-18.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch18-full.mp3",
         "label": "Story 18 原书音频"
       },
       "sentences": [
@@ -13434,7 +13434,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第19章插画"
       },
       "audio": {
-        "src": "assets/audio/story-19.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch19-full.mp3",
         "label": "Story 19 原书音频"
       },
       "sentences": [
@@ -14201,7 +14201,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第20章插画"
       },
       "audio": {
-        "src": "assets/audio/story-20.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch20-full.mp3",
         "label": "Story 20 原书音频"
       },
       "sentences": [
@@ -15121,7 +15121,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第21章插画"
       },
       "audio": {
-        "src": "assets/audio/story-21.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch21-full.mp3",
         "label": "Story 21 原书音频"
       },
       "sentences": [
@@ -15763,7 +15763,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第22章插画"
       },
       "audio": {
-        "src": "assets/audio/story-22.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch22-full.mp3",
         "label": "Story 22 原书音频"
       },
       "sentences": [
@@ -16636,7 +16636,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第23章插画"
       },
       "audio": {
-        "src": "assets/audio/story-23.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch23-full.mp3",
         "label": "Story 23 原书音频"
       },
       "sentences": [
@@ -17312,7 +17312,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第24章插画"
       },
       "audio": {
-        "src": "assets/audio/story-24.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch24-full.mp3",
         "label": "Story 24 原书音频"
       },
       "sentences": [
@@ -17993,7 +17993,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第25章插画"
       },
       "audio": {
-        "src": "assets/audio/story-25.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch25-full.mp3",
         "label": "Story 25 原书音频"
       },
       "sentences": [
@@ -18686,7 +18686,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第26章插画"
       },
       "audio": {
-        "src": "assets/audio/story-26.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch26-full.mp3",
         "label": "Story 26 原书音频"
       },
       "sentences": [
@@ -19373,7 +19373,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第27章插画"
       },
       "audio": {
-        "src": "assets/audio/story-27.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch27-full.mp3",
         "label": "Story 27 原书音频"
       },
       "sentences": [
@@ -20182,7 +20182,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第28章插画"
       },
       "audio": {
-        "src": "assets/audio/story-28.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch28-full.mp3",
         "label": "Story 28 原书音频"
       },
       "sentences": [
@@ -20877,7 +20877,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第29章插画"
       },
       "audio": {
-        "src": "assets/audio/story-29.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch29-full.mp3",
         "label": "Story 29 原书音频"
       },
       "sentences": [
@@ -21562,7 +21562,7 @@ window.KOREAN_BOOK_DATA = {
         "alt": "书中第30章插画"
       },
       "audio": {
-        "src": "assets/audio/story-30.mp3",
+        "src": "https://github.com/Gloria-create0506/korean-reading-github-pages/releases/download/audio-v1/ch30-full.mp3",
         "label": "Story 30 原书音频"
       },
       "sentences": [
