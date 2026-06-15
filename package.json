@@ -1,0 +1,12 @@
+{
+  "name": "korean-reading-workbench",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Korean reading self-study workbench with optional Render password protection.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
